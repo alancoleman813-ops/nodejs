@@ -57,6 +57,7 @@ Write 3 natural paragraphs. No headers. No bullet points. Conversational, real, 
     
   } catch (error) {
     console.error('Claude API error:', error.message);
+    console.error('Full error:', error.response?.status, error.response?.data);
     res.status(500).json({ error: 'Failed to process confession. Try again.' });
   }
 });
